@@ -15,12 +15,15 @@ class EmailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Enter your Email',
-          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+          style: TextStyle(fontWeight: FontWeight.w500, fontSize: width * 0.04),
         ),
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 32),
+        padding: EdgeInsets.symmetric(
+          vertical: height * 0.02,
+          horizontal: width * 0.08,
+        ),
         child: Column(
           children: [
             SizedBox(
@@ -31,10 +34,10 @@ class EmailScreen extends StatelessWidget {
                     label: 'Email',
                     keyboardType: TextInputType.emailAddress,
                   ),
-                  SizedBox(height: 25),
+                  SizedBox(height: height * 0.03),
                   CustomElevatedButton(
-                    width: 154,
-                    height: 46,
+                    width: width * 0.4,
+                    height: height * 0.06,
                     text: 'Next',
                     backgroundColor: AppColors.lightGrey,
                     textColor: AppColors.Black,
