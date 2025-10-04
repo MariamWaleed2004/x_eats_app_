@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:x_eats/core/const.dart';
 
 class CustomTextField extends StatelessWidget {
-  final String label;
+  final String? label;
   final bool obscureText;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
+  final IconData? prefixIcon;
 
   const CustomTextField({
     Key? key,
-    required this.label,
+    this.label,
     this.obscureText = false,
     this.controller,
     this.keyboardType,
+    this.prefixIcon,
   }) : super(key: key);
 
   @override
@@ -25,7 +27,11 @@ class CustomTextField extends StatelessWidget {
         keyboardType: keyboardType,
         cursorColor: AppColors.grey,
         decoration: InputDecoration(
-          labelText: label,
+          prefixIcon:
+              prefixIcon != null
+                  ? Icon(prefixIcon, color: AppColors.lightGrey)
+                  : null,
+          labelText: label ?? "",
           labelStyle: TextStyle(color: AppColors.lightGrey),
           floatingLabelStyle: TextStyle(color: AppColors.darkGreen),
           enabledBorder: OutlineInputBorder(

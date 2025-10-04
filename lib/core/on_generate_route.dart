@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:x_eats/core/const.dart';
 import 'package:x_eats/features/authentication/presentation/screens/sign_in_screen.dart';
 import 'package:x_eats/features/authentication/presentation/screens/sign_up_screens/email_screen.dart';
+import 'package:x_eats/features/authentication/presentation/screens/sign_up_screens/meals_screen.dart';
 import 'package:x_eats/features/authentication/presentation/screens/sign_up_screens/name_screen.dart';
 import 'package:x_eats/features/authentication/presentation/screens/sign_up_screens/password_screen.dart';
 import 'package:x_eats/features/authentication/presentation/screens/sign_up_screens/phone_number_screen.dart';
+import 'package:x_eats/features/authentication/presentation/screens/sign_up_screens/restaurant_screen.dart';
 import 'package:x_eats/features/authentication/presentation/screens/sign_up_screens/verify_screen.dart';
 
 class OnGenerateRoute {
@@ -35,9 +37,17 @@ class OnGenerateRoute {
         {
           return _fadeRoute(VerifyScreen());
         }
-          case ScreenConst.nameScreen:
+      case ScreenConst.nameScreen:
         {
           return _fadeRoute(NameScreen());
+        }
+      case ScreenConst.restaurantScreen:
+        {
+          return _fadeRoute(RestaurantScreen());
+        }
+      case ScreenConst.mealsScreen:
+        {
+          return _fadeRoute(MealsScreen());
         }
       default:
         NoScreenFound();

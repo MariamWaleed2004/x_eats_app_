@@ -11,8 +11,6 @@ class EmailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = AppSizes.screenWidth(context);
     double height = AppSizes.screenHeight(context);
-    double width = AppSizes.screenWidth(context);
-    double height = AppSizes.screenHeight(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(

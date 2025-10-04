@@ -63,7 +63,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
             SizedBox(height: 25),
             Row(
               children: [
-                Text("Didn't et the code? "),
+                Text("Didn't send the code? "),
                 CustomTextButton(
                   textColor: AppColors.lightGreen,
                   text: 'Resend',
