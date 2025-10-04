@@ -8,78 +8,80 @@ class MealsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = AppSizes.screenWidth(context);
+    double height = AppSizes.screenHeight(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
 
         title: Text(
           "Pick the meals that make you smile!",
-          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+          style: TextStyle(fontWeight: FontWeight.w500, fontSize: width * 0.04),
         ),
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 31),
+        padding: EdgeInsets.symmetric(horizontal: width * 0.08),
         child: Column(
           children: [
             CustomTextField(label: 'Search', prefixIcon: Icons.search),
-            SizedBox(height: 37),
+            SizedBox(height: height * 0.045),
             Container(
-              height: 34,
-              width: 368,
+              height: height * 0.042,
+              width: width * 0.95,
 
               decoration: BoxDecoration(
                 color: AppColors.lightGreen50,
-                border: Border.all(color: AppColors.lightGreen500, width: 2),
-                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: AppColors.lightGreen500, width: width * 0.005),
+                borderRadius: BorderRadius.circular(width * 0.02),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 14),
+                padding: EdgeInsets.symmetric(horizontal: width * 0.04),
                 child: Row(
                   children: [
                     Container(
-                      width: 22,
-                      height: 22,
+                      width: width * 0.06,
+                      height: width * 0.06,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 10),
-                    Text('TBS', style: TextStyle(fontSize: 10)),
+                    SizedBox(width: width * 0.026),
+                    Text('TBS', style: TextStyle(fontSize: width * 0.026)),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: height * 0.037),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("Cappuccino Regular", style: TextStyle(fontSize: 11)),
+                    Text("Cappuccino Regular", style: TextStyle(fontSize: width * 0.029)),
                   ],
                 ),
                 // SizedBox(width: 20),
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text('Kunafa', style: TextStyle(fontSize: 11)),
+                    Text('Kunafa', style: TextStyle(fontSize: width * 0.029)),
                   ],
                 ),
 
@@ -87,8 +89,8 @@ class MealsScreen extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
@@ -99,35 +101,35 @@ class MealsScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 37),
+            SizedBox(height: height * 0.045),
             Container(
-              height: 34,
-              width: 368,
+              height: height * 0.042,
+              width: width * 0.95,
 
               decoration: BoxDecoration(
                 color: AppColors.lightGreen50,
-                border: Border.all(color: AppColors.lightGreen500, width: 2),
-                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: AppColors.lightGreen500, width: width * 0.005),
+                borderRadius: BorderRadius.circular(width * 0.021),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 14),
+                padding: EdgeInsets.symmetric(horizontal: width * 0.037),
                 child: Row(
                   children: [
                     Container(
-                      width: 22,
-                      height: 22,
+                      width: width * 0.058,
+                      height: width * 0.058,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 10),
-                    Text('Buffalo Burger', style: TextStyle(fontSize: 10)),
+                    SizedBox(width: width * 0.027),
+                    Text('Buffalo Burger', style: TextStyle(fontSize: width * 0.027)),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: height * 0.037),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -135,28 +137,28 @@ class MealsScreen extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("Bacon Mushroom", style: TextStyle(fontSize: 11)),
+                    Text("Bacon Mushroom", style: TextStyle(fontSize: width * 0.029)),
                   ],
                 ),
                 // SizedBox(width: 20),
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text('SHiitake Mushroom', style: TextStyle(fontSize: 11)),
+                    Text('SHiitake Mushroom', style: TextStyle(fontSize: width * 0.029)),
                   ],
                 ),
 
@@ -164,47 +166,47 @@ class MealsScreen extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text('Old School', style: TextStyle(fontSize: 11)),
+                    Text('Old School', style: TextStyle(fontSize: width * 0.029)),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 37),
+            SizedBox(height: height * 0.045),
             Container(
-              height: 34,
-              width: 368,
+              height: height * 0.042,
+              width: width * 0.95,
 
               decoration: BoxDecoration(
                 color: AppColors.lightGreen50,
-                border: Border.all(color: AppColors.lightGreen500, width: 2),
-                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: AppColors.lightGreen500, width: width * 0.005),
+                borderRadius: BorderRadius.circular(width * 0.021),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 14),
+                padding: EdgeInsets.symmetric(horizontal: width * 0.037),
                 child: Row(
                   children: [
                     Container(
-                      width: 22,
-                      height: 22,
+                      width: width * 0.058,
+                      height: width * 0.058,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 10),
-                    Text('Roma Pizza', style: TextStyle(fontSize: 10)),
+                    SizedBox(width: width * 0.027),
+                    Text('Roma Pizza', style: TextStyle(fontSize: width * 0.027)),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: height * 0.037),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -212,28 +214,28 @@ class MealsScreen extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("Blue cheese", style: TextStyle(fontSize: 11)),
+                    Text("Blue cheese", style: TextStyle(fontSize: width * 0.029)),
                   ],
                 ),
                 // SizedBox(width: 20),
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text('Anchovy Pizza', style: TextStyle(fontSize: 11)),
+                    Text('Anchovy Pizza', style: TextStyle(fontSize: width * 0.029)),
                   ],
                 ),
 
@@ -241,14 +243,14 @@ class MealsScreen extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: width * 0.23,
+                      height: width * 0.23,
                       child: SvgPicture.asset(
                         'assets/restaurants/abo_tarek.svg',
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text('Anchovy Pizza', style: TextStyle(fontSize: 11)),
+                    Text('Anchovy Pizza', style: TextStyle(fontSize:  width * 0.029)),
                   ],
                 ),
               ],
